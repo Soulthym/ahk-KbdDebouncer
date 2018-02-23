@@ -12,7 +12,33 @@ $SC00A::
 $SC00B::
 $Numpad8::
 $NumpadSub::
+$Enter::
+$a::
+$z::
+$e::
+$r::
+$t::
+$y::
+$u::
 $i::
+$o::
+$p::
+$q::
+$s::
+$d::
+$f::
+$g::
+$h::
+$j::
+$k::
+$l::
+$m::
+$w::
+$x::
+$c::
+$v::
+$b::
+$n::
 	key := SubStr(A_ThisHotkey,2)
 	SendInput,{%key% down}
 	Sleep 50
@@ -30,11 +56,38 @@ $+SC003::
 $+SC008::
 $+SC00A::
 $+SC00B::
+$+Enter::
+$+a::
+$+z::
+$+e::
+$+r::
+$+t::
+$+y::
+$+u::
 $+i::
+$+o::
+$+p::
+$+q::
+$+s::
+$+d::
+$+f::
+$+g::
+$+h::
+$+j::
+$+k::
+$+l::
+$+m::
+$+w::
+$+x::
+$+c::
+$+v::
+$+b::
+$+n::
 	key := SubStr(A_ThisHotkey,3)
 	SendInput,{ShiftDown}{%key% down}
+	SendInput,{ShiftUp}
 	Sleep 50
-	SendInput,{ShiftUp}{%key% up}
+	SendInput,{%key% up}
 return
 $>!&::
 $>!"::
@@ -48,7 +101,6 @@ $>!SC003::
 $>!SC008::
 $>!SC00A::
 $>!SC00B::
-$>!i::
 	key := SubStr(A_ThisHotkey,3)
 	SendInput,{RAlt}{%key% down}
 	Sleep 50
